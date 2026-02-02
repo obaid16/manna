@@ -3,7 +3,6 @@
 import React, { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Anybody } from 'next/font/google';
 
 export default function Portfolio() {
   useEffect(() => {
@@ -35,7 +34,7 @@ export default function Portfolio() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(any.getAttribute('href'));
+        const target = document.querySelector(this.getAttribute('href'));
         if (target) {
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });
           mobileMenu?.classList.add('hidden');
@@ -418,7 +417,7 @@ export default function Portfolio() {
                   <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-secondary opacity-20 blur-3xl"></div>
                   <div className="relative w-full h-full rounded-full overflow-hidden shadow-2xl border-8 border-white">
                     <Image 
-                      src="/manna.jpg" 
+                      src="/profile-photo.jpg" 
                       alt="Tamanna Ansari - Portfolio Photo" 
                       fill
                       className="object-cover"
@@ -669,10 +668,6 @@ export default function Portfolio() {
                   <p className="text-gray-600 mb-4">Modern travel booking with immersive visuals</p>
                 </div>
               </Link>
-              
-           
-              
-            
             </div>
           </div>
         </section>
