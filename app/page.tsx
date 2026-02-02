@@ -31,16 +31,17 @@ export default function Portfolio() {
     window.addEventListener('scroll', handleScroll);
     
     // Smooth Scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          mobileMenu?.classList.add('hidden');
-        }
-      });
-    });
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const href = anchor.getAttribute('href'); // Changed from this.getAttribute
+    const target = document.querySelector(href);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      mobileMenu?.classList.add('hidden');
+    }
+  });
+});
     
     // Reveal Sections
     const reveals = document.querySelectorAll('.reveal');
