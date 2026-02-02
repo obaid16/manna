@@ -418,7 +418,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                   <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-secondary opacity-20 blur-3xl"></div>
                   <div className="relative w-full h-full rounded-full overflow-hidden shadow-2xl border-8 border-white">
                     <Image 
-                      src="/profile-photo.jpg" 
+                      src="/manna.jpg" 
                       alt="Tamanna Ansari - Portfolio Photo" 
                       fill
                       className="object-cover"
